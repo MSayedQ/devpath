@@ -1,0 +1,9 @@
+# Site Configuration
+titleBase: DEVPATH
+favicon: favicon.ico
+description: پلتفرم یادگیری برنامه‌نویسی و توسعه نرم‌افزار برای مردم افغانستان
+
+# Social media links
+social:
+  - name: Github
+    url: https://github.com/msayedq
