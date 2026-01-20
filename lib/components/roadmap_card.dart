@@ -45,8 +45,7 @@ class RoadmapCard extends StatelessComponent {
 
   @css
   static List<StyleRule> get styles => [
-    css('.roadmap-card').styles(
-      display: .block,
+    css('.roadmap-card').styles(      display: .block,
       padding: .all(1.5.rem),
       margin: .only(bottom: 1.25.rem),
       radius: .circular(0.75.rem),

@@ -17,9 +17,21 @@ void main() {
     options: defaultClientOptions,
   );
 
-  // Set RTL direction for Persian language
-  html.document.documentElement?.setAttribute('dir', 'rtl');
-  html.document.documentElement?.setAttribute('lang', 'fa');
+  // Set LTR direction (left-to-right)
+  html.document.documentElement?.setAttribute('dir', 'ltr');
+  html.document.documentElement?.setAttribute('lang', 'en');
+
+  // Set favicon to app logo
+  final link = html.document.querySelector('link[rel="icon"]') as html.LinkElement?;
+  if (link != null) {
+    link.href = '/images/favicon.svg';
+  } else {
+    final newLink = html.LinkElement()
+      ..rel = 'icon'
+      ..type = 'image/svg+xml'
+      ..href = '/images/favicon.svg';
+    html.document.head?.append(newLink);
+  }
 
   // Starts the app.
   //

@@ -6,6 +6,7 @@
 
 import 'package:jaspr/server.dart';
 import 'package:devpath/components/clicker.dart' as _clicker;
+import 'package:devpath/components/hero_section.dart' as _hero_section;
 import 'package:devpath/components/roadmap_card.dart' as _roadmap_card;
 import 'package:jaspr_content/components/_internal/code_block_copy_button.dart'
     as _code_block_copy_button;
@@ -38,6 +39,9 @@ ServerOptions get defaultServerOptions => ServerOptions(
   clientId: 'main.client.dart.js',
   clients: {
     _clicker.Clicker: ClientTarget<_clicker.Clicker>('clicker'),
+    _hero_section.HeroSection: ClientTarget<_hero_section.HeroSection>(
+      'hero_section',
+    ),
     _code_block_copy_button.CodeBlockCopyButton:
         ClientTarget<_code_block_copy_button.CodeBlockCopyButton>(
           'jaspr_content:code_block_copy_button',
@@ -56,6 +60,7 @@ ServerOptions get defaultServerOptions => ServerOptions(
   },
   styles: () => [
     ..._clicker.ClickerState.styles,
+    ..._hero_section.HeroSectionState.styles,
     ..._roadmap_card.RoadmapCard.styles,
     ..._zoomable_image.ZoomableImage.styles,
     ..._callout.Callout.styles,

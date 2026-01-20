@@ -7,6 +7,7 @@
 import 'package:jaspr/client.dart';
 
 import 'package:devpath/components/clicker.dart' deferred as _clicker;
+import 'package:devpath/components/hero_section.dart' deferred as _hero_section;
 import 'package:jaspr_content/components/_internal/code_block_copy_button.dart'
     deferred as _code_block_copy_button;
 import 'package:jaspr_content/components/_internal/zoomable_image.dart'
@@ -37,6 +38,10 @@ ClientOptions get defaultClientOptions => ClientOptions(
     'clicker': ClientLoader(
       (p) => _clicker.Clicker(),
       loader: _clicker.loadLibrary,
+    ),
+    'hero_section': ClientLoader(
+      (p) => _hero_section.HeroSection(),
+      loader: _hero_section.loadLibrary,
     ),
     'jaspr_content:code_block_copy_button': ClientLoader(
       (p) => _code_block_copy_button.CodeBlockCopyButton(),

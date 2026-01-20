@@ -18,6 +18,7 @@ import 'package:jaspr_content/theme.dart';
 
 import 'components/clicker.dart';
 import 'components/roadmap_card.dart';
+import 'components/hero_section.dart';
 
 // This file is generated automatically by Jaspr, do not remove or edit.
 import 'main.server.options.dart';
@@ -34,6 +35,7 @@ void main() {
   // your markdown files in the content/ directory to a beautiful documentation site.
   runApp(
     ContentApp(
+      
       // Enables mustache templating inside the markdown files.
       templateEngine: MustacheTemplateEngine(),
       parsers: [
@@ -67,6 +69,11 @@ void main() {
               icon: attrs['icon']?.toString() ?? '📚',
             );
           },
+        ),
+        // Adds hero section with scroll-based image swapping.
+        CustomComponent(
+          pattern: 'HeroSection',
+          builder: (_, _, _) => HeroSection(),
         ),
         // Adds zooming and caption support to images.
         Image(zoom: true),

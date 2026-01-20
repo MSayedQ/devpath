@@ -1,9 +1,26 @@
 # Site Configuration
 titleBase: DEVPATH
-favicon: favicon.ico
+favicon: /images/favicon.svg
 description: پلتفرم یادگیری برنامه‌نویسی و توسعه نرم‌افزار برای مردم افغانستان
 
 # Social media links
 social:
+  - name: Portfolio
+    url: https://msayedq.dev/
   - name: Github
     url: https://github.com/msayedq
+  - name: Telegram
+    url: https://t.me/msayedq
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/msayedq
+  - name: Twitter
+    url: https://twitter.com/msayedq
+  - name: Facebook
+    url: https://www.facebook.com/msayedq
+  - name: Instagram
+    url: https://www.instagram.com/msayedq
+  - name: YouTube
+    url: https://www.youtube.com/msayedq
+  - name: TikTok
+    url: https://www.tiktok.com/@msayedq
+  - name: Reddit
